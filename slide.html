@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js">
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Riduzione oraria</title>
+</head>
+
+<body>
+
+    <br>
+
+    <h3 style="color: black">Cosa prevede la normativa scolastica?</h3>
+    <div class="grayBorder">
+        Dal <a
+            href="https://www.cislscuola.it/fileadmin/cislscuola/content/Immagini_Sito/CCNL_2019-21/20240124_-_Testo_definitivo_contratto_scuola.pdf">CCNL
+            2019/2021 “Istruzione e Ricerca” sezione Scuola</a>:
+        <div class="grayBackground">
+            <b>Art. 43 - Attività dei docenti</b>
+            <br>
+            <br>
+            <b>7.</b> Al di fuori dei casi previsti dal comma 8, qualunque riduzione della durata dell'unità oraria di
+            lezione ne comporta il recupero prioritariamente in favore dei medesimi alunni nell’ambito
+            delle attività didattiche programmate dall’istituzione scolastica. La relativa delibera è assunta
+            dal collegio dei docenti.
+            <br>
+            <br>
+            <b>8.</b> Per quanto attiene la riduzione dell'ora di lezione per cause di forza maggiore determinate
+            da motivi estranei alla didattica, la materia resta regolata dalle circolari ministeriali <a
+                href="https://www.dirittoscolastico.it/circolare-ministeriale-n-243-1979/">n. 243 del 22.9.1979</a>
+            e <a href="https://www.dirittoscolastico.it/circolare-ministeriale-n-192-del-03-07-1980/">n. 192 del
+                3.7.1980</a> nonché dalle ulteriori circolari in materia che le hanno
+            confermate. La relativa delibera è assunta dal consiglio di circolo o d’istituto.
+        </div>
+
+        <br>
+        <br>
+
+        Riassumendo:
+        <br>
+        <br>
+        <ul>
+            <li>
+                Se le <b class="red"> motivazioni</b> della riduzione sono <b class="red">estranee alla didattica</b>
+                allora
+                <br>
+                <br>
+                <ol>
+                    <li>
+                        non c'è obbligo di recupero da parte dei docenti;
+                    </li>
+                    <br>
+                    <li>
+                        Le riduzioni delle ore di lezione devono seguire lo schema riassunto
+                        in tabella;
+                        <br>
+                        <br>
+                        <table>
+                            <tr>
+                                <th>
+                                    ore di lezione della giornata
+                                </th>
+                                <th>
+                                    ore riducibili
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    <i>Nessuna</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    5
+                                </td>
+                                <td>
+                                    <i>Prima ora oppure ultima ora
+                                        <br>
+                                        (eccezionalmente entrambe)</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    6
+                                </td>
+                                <td>
+                                    <i>Prima ora ed ultima ora
+                                        <br>
+                                        (eccezionalmente penultima)</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    7
+                                </td>
+                                <td>
+                                    <i>Prima due ed ultime tre ore</i>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <br>
+                    <li>
+                        La relativa delibera è assunta dal <b>consiglio</b> di circolo o <b>d’istituto</b>.
+                    </li>
+                </ol>
+            </li>
+            <br>
+            <li>
+                Se le <b class="blue"> motivazioni</b> della riduzione sono <b class="blue">didattiche</b>
+                allora
+                <br>
+                <br>
+                <ol>
+                    <li>
+                        il <b>recupero</b> deve essere effettuato prioritariamente <b>in favore dei medesimi alunni</b>.
+                    </li>
+                    <br>
+                    <li>
+                        La relativa delibera è assunta dal <b>collegio docenti</b>.
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 style="color: black">Problemi del PTOF</h3>
+    <div class="grayBorder">
+        Di seguito la bozza proposta nel PTOF.
+        <br>
+        <div class="grayBackground">
+            <b>1.2.2 Scansione oraria delle lezioni</b>
+            <br>
+            <br>
+            ll Collegio dei docenti, <b class="blue">per migliorare la qualità dell'offerta didattico-formativa</b> e <b
+                class="red">per favorire gli
+                spostamenti degli alunni da e verso le loro abitazioni compatibilmente alle distanze da scuola</b>, ha
+            deliberato che nel presente anno scolastico tutte le unità didattiche hanno la durata di 54 minuti.
+            Tale scelta risponde anche alle esigenze di <b class="blue">offrire agli studenti più unità didattiche delle
+                materie,
+                stimolando le eccellenze e aiutando i recuperi</b>.
+
+            <br>
+            <br>
+            <i>[...]</i>
+            <br>
+            <br>
+            <div style="display: none;">
+                L'orario in presenza è quindi il seguente:
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <td>1^a ora</td>
+                        <td>08:00 - 08:54</td>
+                    </tr>
+                    <tr>
+                        <td>2^a ora</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3^a ora</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4^a ora</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5^a ora</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6^a ora</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7^a ora</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+            In relazione a tale riduzione oraria, i docenti svolgono 20 moduli settimanali da 54 minuti, di cui
+            due come moduli integrativi prioritariamente nelle proprie classi, per realizzare una
+            personalizzazione dei percorsi didattici a seconda dei bisogni educativi della classe (flessibilità
+            didattica e organizzativa).
+            <br>
+            <br>
+            <i>[...]</i>
+            <br>
+            <br>
+        </div>
+
+        <br>
+        <br>
+
+
+        Il testo proposto presenta questi problemi:
+        <br>
+        <br>
+        <ul>
+            <li>
+                le motivazioni della contrazione oraria menzionate sono sia di natura
+                <b class="blue">didattica</b> che <b class="red">extra-didattica</b>, quindi non è possibile
+                stabilire entro quale di due casi della normativa inquadrare la sistuazione del
+                nostro istituto.
+            </li>
+            <br>
+            <li>
+                Se ipotizziamo che la motivazione sia di natura <b class="red">extra-didattica</b>, allora
+                i <b>docenti non sono tenuti al recupero</b> delle ore perse.
+            </li>
+            <br>
+            <li>
+                Se ipotizziamo che la motivazione sia di natura <b class="blue">didattica</b>, 
+                allora non solo i docenti, ma anche gli <b>studenti devono recuperare <u>tutte</u> le ore perse</b>.
+                Queste attualmente, laddove non impiegate per i moduli 
+                integrativi, confluiscono nelle ore di disposizione per le supplenze.
+                <br>
+                <br>
+                
+                <i style="font-size: 1rem;">Esempio: classi quinte indirizzo informatico</i> 
+                <br>                
+                <table style="font-size: 1rem;">                
+                    <tr>
+                        <th style="text-align: left;">
+                            ore previste                            
+                            a settimana
+                        </th>
+                        <td>
+                            33
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style=" width: fit-content; text-align: left;">
+                            ore svolte                             
+                            a settimana
+                        </th>
+                        <td>
+                            32,5
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style=" width: fit-content; text-align: left;">
+                            differenza                             
+                            a settimana
+                        </th>
+                        <td>
+                            0,5
+                        </td>
+                    </tr>
+                    <tr>
+                        <th style=" width: fit-content; text-align: left;">
+                            differenza su un anno                             
+                            <br>
+                            scolastico medio (33 settimane)
+                        </th>
+                        <td>
+                            16,5
+                        </td>
+                    </tr>
+                    <tr>                                                                
+                </table>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <h3 style="color: black">Proposta di modifica</h3>
+    <div class="grayBorder">
+        Propongo aggiungere al testo attuale la parte evidenziata in rosso e cancellare quelle sbarrate.
+        <br>        
+        <div class="grayBackground">
+            ll Collegio dei docenti, per migliorare la qualità dell'offerta didattico-formativa 
+            <del>e per favorire gli spostamenti degli alunni da e verso le loro abitazioni compatibilmente 
+            alle distanze da scuola</del>, ha deliberato che nel presente anno scolastico tutte le unità 
+            didattiche hanno la durata di 54 minuti. Tale scelta risponde anche alle esigenze di 
+            offrire agli studenti più unità didattiche delle materie, stimolando le eccellenze e 
+            aiutando i recuperi.
+            
+            <br>
+            <br>
+            [...]
+            <br>
+            <br>
+
+            In relazione a tale riduzione oraria, i docenti svolgono
+            20 moduli settimanali da 54 minuti, di cui due acome
+            moduli integrativi nelle proprie classi, per realizzare una
+            personalizzazione dei percorsi didattici a seconda dei
+            bisogni educativi della classe (flessibilità didattica e
+            organizzativa) <span class="red">oppure come moduli a disposizione per lo
+            svolgimento di supplenze laddove si rendano
+            necessarie</span>.
+        </div>
+    </div>
+
+
+
+    <br>
+    <br>
+
+    <script src="../../js/hintAndSlide.js"></script>
+
+</body>
